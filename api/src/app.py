@@ -6,10 +6,6 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 start_time = time.time()
 
-@app.route('/')
-def sitemap():
-    return generate_sitemap(app)
-    
 
 @app.route("/health", methods=["GET"])
 def health_check():
